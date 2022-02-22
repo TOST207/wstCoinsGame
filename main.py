@@ -9,7 +9,6 @@ from rich.console import Console
 from save import Save
 
 
-
 _Save = Save()
 _run: bool = True
 
@@ -35,3 +34,6 @@ if __name__ == "__main__":
         
     except:
         quit()
+
+
+        
