@@ -7,7 +7,7 @@ FILE: str = "Save.json"
 _startData_v02: dict = {
     "visits": 0,
     "prefix": "> ",
-    "money": 1000,
+    "money": 10000,
     "delete_/": False
 }
 
