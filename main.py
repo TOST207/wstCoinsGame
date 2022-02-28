@@ -6,7 +6,7 @@ from rich.box import ASCII
 # from rich.syntax import Syntax
 # from rich.table import Table
 from save import Save
-
+from function import BasicChoices
 
 
 _Console = Console()
@@ -27,15 +27,22 @@ def main():
             ":Добро пожаловать в wstCoins game!\n"
             "Если желаете пройти обучение напишите \"training\"."
         )
+        # Увеличиваем "visits" на 1 и сохраняем это
+        _data["visits"] += 1
+        _Save.doSave(_data)
         input("/")
         
     while _run:
-        _prefix = _Save.getSave()
+        # Каждый цикл переправиряем переменную
+        _prefix = _Save.getSave()["prefix"]
         
         print("\n\n:HUB")
         _vr_entry_user = input(_prefix)
         
-        pv
+        _vr11 = BasicChoices(_vr_entry_user)
+        
+        
+        
         
         
         
@@ -55,4 +62,5 @@ if __name__ == "__main__":
         
         
     except:
+        _Console.print_exception()
         quit()
